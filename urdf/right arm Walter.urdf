@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="right arm Walter">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0208759840382558 2.28906328957612E-05 -0.0199126468532334"
+        rpy="0 0 0" />
+      <mass
+        value="0.0569859937754465" />
+      <inertia
+        ixx="1.14535467104961E-05"
+        ixy="1.03127498835634E-08"
+        ixz="2.043686021369E-07"
+        iyy="1.31200553450412E-05"
+        iyz="-1.49941182774934E-09"
+        izz="1.41568758022781E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.737254901960784 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="pitch_Link">
+    <inertial>
+      <origin
+        xyz="0.0073209301272586 0.008048317009343 0.0188728264009675"
+        rpy="0 0 0" />
+      <mass
+        value="0.072743977696853" />
+      <inertia
+        ixx="2.66616432713888E-05"
+        ixy="-1.04834788040772E-07"
+        ixz="-5.14822538639029E-09"
+        iyy="3.90800734436557E-05"
+        iyz="1.03404208618845E-08"
+        izz="3.48818996867284E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pitch_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="roll_Link">
+    <inertial>
+      <origin
+        xyz="0.0954999999877982 0.000459012158928185 -0.0206571696046805"
+        rpy="0 0 0" />
+      <mass
+        value="0.116418920121789" />
+      <inertia
+        ixx="1.63704158763393E-05"
+        ixy="2.01436691402085E-07"
+        ixz="-2.01180500705936E-07"
+        iyy="3.82244968314702E-05"
+        iyz="2.99881525603628E-09"
+        izz="3.82244968249053E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.737254901960784 0.729411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.021 0.054"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="pitch_Link" />
+    <child
+      link="roll_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow_Link">
+    <inertial>
+      <origin
+        xyz="0.12641300084617 -5.16886325070687E-05 -0.0161809809317491"
+        rpy="0 0 0" />
+      <mass
+        value="0.129290996002868" />
+      <inertia
+        ixx="4.2874125431238E-05"
+        ixy="-8.03374206887894E-11"
+        ixz="-8.87199584138601E-09"
+        iyy="8.44333519427061E-05"
+        iyz="-7.08397852245953E-10"
+        izz="8.42296132718026E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/elbow_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://right arm Walter/meshes/elbow_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint"
+    type="revolute">
+    <origin
+      xyz="0.191 0.0212 -0.021"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="roll_Link" />
+    <child
+      link="elbow_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
