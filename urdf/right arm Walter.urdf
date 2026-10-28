@@ -101,7 +101,7 @@
     <child
       link="pitch_Link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="-1.5708"
       upper="1.5708"
@@ -159,10 +159,10 @@
     <child
       link="roll_Link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.5708"
-      upper="0"
+      lower="0"
+      upper="1.5708"
       effort="5"
       velocity="1.0" />
   </joint>
@@ -217,10 +217,10 @@
     <child
       link="elbow_Link" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.5708"
-      upper="0"
+      lower="0"
+      upper="1.5708"
       effort="5"
       velocity="1.0" />
   </joint>
